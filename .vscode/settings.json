@@ -1,1 +1,8 @@
-{}
+{
+    "workbench.editorAssociations": {
+        "*.o": "hexEditor.hexedit",
+        "*.bin": "hexEditor.hexedit",
+    },
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+}

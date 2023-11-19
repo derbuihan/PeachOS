@@ -1,5 +1,7 @@
 {
 	"recommendations": [
 		"ms-vscode.makefile-tools",
+		"ms-vscode.hexeditor",
+		"ms-vscode.cpptools-extension-pack",
 	],
 }
