@@ -4,5 +4,9 @@
         "*.bin": "hexEditor.hexedit",
     },
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true
+    "editor.formatOnPaste": true,
+    "files.associations": {
+        "kernel.h": "c",
+        "stdint.h": "c"
+    }
 }

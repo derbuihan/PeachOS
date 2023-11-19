@@ -9,7 +9,7 @@
 ## Run
 
 ```bash
-qemu-system-x86_64 -fda ./bin/os.bin
+qemu-system-x86_64 -hda ./bin/os.bin
 ```
 
 ## Debug
