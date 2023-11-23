@@ -34,6 +34,8 @@ void terminal_writechar(char c, char color) {
 
 void terminal_initialize() {
   video_memory = (uint16_t *)0xb8000;
+  uint16_t terminal_row = 0;
+  uint16_t terminal_col = 0;
   for (int y = 0; y < VGA_HEIGHT; y++) {
     for (int x = 0; x < VGA_WIDTH; x++) {
       terminal_putchar(x, y, ' ', 0);
