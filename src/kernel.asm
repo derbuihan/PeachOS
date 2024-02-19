@@ -16,20 +16,23 @@ _start:
     mov ebp, 0x00200000
     mov esp, ebp
 
-    ; Enable A20
+    ; Enable the A20 line
     in al, 0x92
     or al, 2
     out 0x92, al
 
+    ; Remap the master PIC
     mov al, 00010001b
-    out 0x20, al
+    out 0x20, al ; Tell master PIC
 
-    mov al, 0x20
+    mov al, 0x20 ; Interrupt 0x20 is where master ISR should start
     out 0x21, al
 
     mov al, 00000001b
     out 0x21, al
+    ; End remap of the master PIC
 
+    ; Enable interrupts
     sti
 
     call kernel_main

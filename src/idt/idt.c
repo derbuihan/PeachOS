@@ -13,7 +13,7 @@ extern void int21h();
 extern void no_interrupt();
 
 void int21h_handler() {
-  print("Keyboard interrupt\n");
+  print("Keyboard pressed!\n");
   outb(0x20, 0x20);
 }
 
@@ -40,7 +40,8 @@ void idt_init() {
   }
 
   idt_set(0, idt_zero);
-  idt_set(0x20, int21h);
+  idt_set(0x21, int21h);
 
+  // Load the interrupt descriptor table
   idt_load(&idtr_descriptor);
 }
