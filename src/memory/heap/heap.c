@@ -65,8 +65,8 @@ static int heap_get_entry_type(HEAP_BLOCK_TABLE_ENTRY entry) {
 
 int heap_get_start_block(struct heap* heap, uint32_t total_blocks) {
   struct heap_table* table = heap->table;
-  int bc = 0;
-  int bs = -1;
+  int bc = 0;   // current block
+  int bs = -1;  // start block
 
   for (size_t i = 0; i < table->total; i++) {
     if (heap_get_entry_type(table->entries[i]) != HEAP_BLOCK_TABLE_ENTRY_FREE) {

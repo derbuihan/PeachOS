@@ -14,8 +14,8 @@
 typedef unsigned char HEAP_BLOCK_TABLE_ENTRY;
 
 struct heap_table {
-  HEAP_BLOCK_TABLE_ENTRY* entries;
-  size_t total;
+  HEAP_BLOCK_TABLE_ENTRY* entries;  // Pointer to the table
+  size_t total;                     // Total number of entries
 };
 
 struct heap {

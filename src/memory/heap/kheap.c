@@ -13,10 +13,10 @@ void kheap_init() {
       (HEAP_BLOCK_TABLE_ENTRY *)(PEACHOS_HEAP_TABLE_ADDRESS);
   kernel_heap_table.total = total_table_entries;
 
+  void *start = (void *)(PEACHOS_HEAP_ADDRESS);
   void *end = (void *)(PEACHOS_HEAP_ADDRESS + PEACHOS_HEAP_SIZE_BYTES);
 
-  int res = heap_create(&kernel_heap, (void *)(PEACHOS_HEAP_ADDRESS), end,
-                        &kernel_heap_table);
+  int res = heap_create(&kernel_heap, start, end, &kernel_heap_table);
   if (res < 0) {
     print("Faild to create heap\n");
   }
