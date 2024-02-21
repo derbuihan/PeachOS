@@ -15,6 +15,7 @@
         "vector": "c",
         "string_view": "c",
         "initializer_list": "c",
-        "memory.h": "c"
+        "memory.h": "c",
+        "paging.h": "c"
     }
 }
