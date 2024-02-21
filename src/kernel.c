@@ -59,7 +59,7 @@ void print(const char *str) {
 
 void kernel_main() {
   terminal_initialize();
-  print("Hello, World!\ntest");
+  print("\n\nHello, World!\ntest");
 
   // Initialize the heap
   kheap_init();

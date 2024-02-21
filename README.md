@@ -9,7 +9,7 @@
 ## Run
 
 ```bash
-qemu-system-x86_64 -hda ./bin/os.bin
+qemu-system-i386 -hda ./bin/os.bin
 ```
 
 ## Debug
@@ -21,7 +21,7 @@ gdb
 ```
 add-symbol-file ./build/kernelfull.o 0x100000
 break _start
-remote target | qemu-system-x86_64 -S -gdb stdio -hda ./bin/os.bin
+remote target | qemu-system-i386 -S -gdb stdio -hda ./bin/os.bin
 ```
 
 # References
