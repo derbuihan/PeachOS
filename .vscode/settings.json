@@ -1,21 +1,22 @@
 {
-    "workbench.editorAssociations": {
-        "*.o": "hexEditor.hexedit",
-        "*.bin": "hexEditor.hexedit",
-    },
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "files.associations": {
-        "kernel.h": "c",
-        "stdint.h": "c",
-        "array": "c",
-        "deque": "c",
-        "string": "c",
-        "unordered_map": "c",
-        "vector": "c",
-        "string_view": "c",
-        "initializer_list": "c",
-        "memory.h": "c",
-        "paging.h": "c"
-    }
+  "workbench.editorAssociations": {
+    "*.o": "hexEditor.hexedit",
+    "*.bin": "hexEditor.hexedit"
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "files.associations": {
+    "kernel.h": "c",
+    "stdint.h": "c",
+    "array": "c",
+    "deque": "c",
+    "string": "c",
+    "unordered_map": "c",
+    "vector": "c",
+    "string_view": "c",
+    "initializer_list": "c",
+    "memory.h": "c",
+    "paging.h": "c",
+    "stddef.h": "c"
+  }
 }
