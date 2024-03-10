@@ -4,9 +4,11 @@
 #include <stdint.h>
 
 #include "disk/disk.h"
+#include "fs/pparser.h"
 #include "idt/idt.h"
 #include "memory/heap/kheap.h"
 #include "memory/paging/paging.h"
+#include "string/string.h"
 
 uint16_t *video_mem = 0;
 uint16_t terminal_row = 0;
@@ -44,14 +46,6 @@ void terminal_initialize() {
   }
 }
 
-size_t strlen(const char *str) {
-  size_t len = 0;
-  while (str[len]) {
-    len++;
-  }
-  return len;
-}
-
 void print(const char *str) {
   size_t len = strlen(str);
   for (size_t i = 0; i < len; i++) {
@@ -62,7 +56,7 @@ void print(const char *str) {
 static struct paging_4gb_chunk *kernel_chunk = 0;
 void kernel_main() {
   terminal_initialize();
-  print("\n\nHello, World!\ntest");
+  print("\n\nHello, World!\n\n");
 
   // Initialize the heap
   kheap_init();
@@ -85,4 +79,12 @@ void kernel_main() {
 
   // Enable interrupts
   enable_interrupts();
+
+  struct path_root *root_path = pathparser_parse("0:/bin/shell.exe", NULL);
+  struct path_part *part = root_path->first;
+  while (part) {
+    print(part->part);
+    print("\n");
+    part = part->next;
+  }
 }
