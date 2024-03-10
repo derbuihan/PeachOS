@@ -17,6 +17,7 @@
     "initializer_list": "c",
     "memory.h": "c",
     "paging.h": "c",
-    "stddef.h": "c"
+    "stddef.h": "c",
+    "kheap.h": "c"
   }
 }
