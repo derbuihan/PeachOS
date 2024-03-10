@@ -31,6 +31,11 @@ int diskstreamer_read(struct disk_stream *stream, void *out, int total) {
     *(char *)out++ = buf[offset + i];
   }
 
+  // Adjust the stream
+  stream->pos += total_to_read;
+  if (total > PEACHOS_SECTOR_SIZE) {
+    res = diskstreamer_read(stream, out, total - PEACHOS_SECTOR_SIZE);
+  }
 out:
   return res;
 }

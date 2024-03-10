@@ -57,7 +57,7 @@ void print(const char *str) {
 static struct paging_4gb_chunk *kernel_chunk = 0;
 void kernel_main() {
   terminal_initialize();
-  print("\n\nHello, World!\n\n");
+  print("\n\nWelcome PeachOS!!\n\n");
 
   // Initialize the heap
   kheap_init();
