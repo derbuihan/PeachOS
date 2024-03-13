@@ -5,6 +5,7 @@
 
 #include "disk/disk.h"
 #include "disk/streamer.h"
+#include "fs/file.h"
 #include "fs/pparser.h"
 #include "idt/idt.h"
 #include "memory/heap/kheap.h"
@@ -62,6 +63,9 @@ void kernel_main() {
   // Initialize the heap
   kheap_init();
 
+  // Initialize filesystems
+  fs_init();
+
   // Search and initialize the disks
   disk_search_and_init();
 
@@ -81,11 +85,8 @@ void kernel_main() {
   // Enable interrupts
   enable_interrupts();
 
-  struct disk_stream *stream = diskstreamer_new(0);
-  diskstreamer_seek(stream, 0x1fe);
-  char c = 0;
-  diskstreamer_read(stream, &c, 1);
-  print("Read byte: ");
-  print(&c);
-  diskstreamer_close(stream);
+  char buf[20];
+  strcpy(buf, "Hello!");
+  while (1) {
+  }
 }

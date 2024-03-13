@@ -1,6 +1,7 @@
 #include "file.h"
 
 #include "config.h"
+#include "fat/fat16.h"
 #include "kernel.h"
 #include "memory/heap/kheap.h"
 #include "memory/memory.h"
@@ -30,7 +31,7 @@ void fs_insert_filesystem(struct filesystem *filesystem) {
   *fs = filesystem;
 }
 
-static void fs_static_load() {}
+static void fs_static_load() { fs_insert_filesystem(fat16_init()); }
 
 void fs_load() {
   memset(filesystems, 0, sizeof(filesystems));
