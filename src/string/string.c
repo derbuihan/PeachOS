@@ -1,5 +1,12 @@
 #include "string.h"
 
+char tolower(char s1) {
+  if (s1 >= 65 && s1 <= 90) {
+    return s1 + 32;
+  }
+  return s1;
+}
+
 int strlen(const char *ptr) {
   int i = 0;
   while (*ptr != 0) {
@@ -16,6 +23,12 @@ int strnlen(const char *ptr, int max) {
   }
   return i;
 }
+
+int strnlen_terminator(const char *str, int max, char terminator) { return 0; }
+
+int istrncmp(const char *s1, const char *s2, int n) { return 0; }
+
+int strncmp(const char *str1, const char *str2, int n) { return 0; }
 
 char *strcpy(char *dest, const char *src) {
   char *res = dest;
