@@ -19,5 +19,14 @@
     "paging.h": "c",
     "stddef.h": "c",
     "kheap.h": "c"
+  },
+  "clangd.arguments": [
+    "--compile-commands-dir=${workspaceFolder}",
+    "--header-insertion=never",
+    "--clang-tidy",
+    "--enable-config"
+  ],
+  "[c]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
   }
 }

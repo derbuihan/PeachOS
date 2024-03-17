@@ -1,7 +1,8 @@
 {
-	"recommendations": [
-		"ms-vscode.makefile-tools",
-		"ms-vscode.hexeditor",
-		"ms-vscode.cpptools-extension-pack",
-	],
+  "recommendations": [
+    "ms-vscode.makefile-tools",
+    "ms-vscode.hexeditor",
+    "ms-vscode.cpptools-extension-pack",
+    "llvm-vs-code-extensions.vscode-clangd"
+  ]
 }

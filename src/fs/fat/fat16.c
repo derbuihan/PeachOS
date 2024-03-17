@@ -242,7 +242,7 @@ int fat16_resolve(struct disk* disk) {
   }
 
   uint8_t signature = fat_private->header.shared.extended_header.signature;
-  if (signature != 0x28 || signature != 0x29) {
+  if (signature != 0x29) {
     res = -EFSNOTUS;
     goto out;
   }
