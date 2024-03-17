@@ -4,9 +4,7 @@
 #include <stdint.h>
 
 #include "disk/disk.h"
-#include "disk/streamer.h"
 #include "fs/file.h"
-#include "fs/pparser.h"
 #include "idt/idt.h"
 #include "memory/heap/kheap.h"
 #include "memory/paging/paging.h"
