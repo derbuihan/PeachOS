@@ -8,5 +8,6 @@
 #define EBADPATH 4  // Bad path
 #define EFSNOTUS 5  // Filesystem not usable
 #define ERDONLY 6   // Read-only filesystem
+#define EUNIMP 7    // Unimplemented
 
 #endif
