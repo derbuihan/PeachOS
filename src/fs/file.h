@@ -25,7 +25,7 @@ typedef int (*FS_SEEK_FUNCTION)(void *private, uint32_t offset,
 
 struct file_stat {
   FILE_STAT_FLAGS flags;
-  uint32_t size;
+  uint32_t filesize;
 };
 typedef int (*FS_STAT_FUNCTION)(struct disk *disk, void *private,
                                 struct file_stat *stat);
