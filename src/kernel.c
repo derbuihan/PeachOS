@@ -92,8 +92,9 @@ void kernel_main() {
 
   int fd = fopen("0:/hello.txt", "r");
   if (fd) {
-    struct file_stat s;
-    fstat(fd, &s);
+    char buf[100];
+    fread(buf, 1, 100, fd);
+    print(buf);
     fclose(fd);
 
     print("testing\n");
